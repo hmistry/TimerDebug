@@ -14,6 +14,10 @@
 		86B8424C153BCA1A00C3425C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B8424B153BCA1A00C3425C /* main.m */; };
 		86B8424F153BCA1A00C3425C /* TimerDebugAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B8424E153BCA1A00C3425C /* TimerDebugAppDelegate.m */; };
 		86B84252153BCA1A00C3425C /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B84250153BCA1A00C3425C /* MainWindow.xib */; };
+		86B8425B153BCA6A00C3425C /* GoodTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B84259153BCA6A00C3425C /* GoodTimerViewController.m */; };
+		86B8425C153BCA6A00C3425C /* GoodTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B8425A153BCA6A00C3425C /* GoodTimerViewController.xib */; };
+		86B84260153BCA9300C3425C /* BadTimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B8425E153BCA9300C3425C /* BadTimerViewController.m */; };
+		86B84261153BCA9300C3425C /* BadTimerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 86B8425F153BCA9300C3425C /* BadTimerViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,13 +25,19 @@
 		86B8423E153BCA1A00C3425C /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		86B84240153BCA1A00C3425C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		86B84242153BCA1A00C3425C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		86B84246153BCA1A00C3425C /* TimerDebug-Info.plist */ = {isa = PBXFileReference; path = "TimerDebug-Info.plist"; sourceTree = "<group>"; };
+		86B84246153BCA1A00C3425C /* TimerDebug-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TimerDebug-Info.plist"; sourceTree = "<group>"; };
 		86B84248153BCA1A00C3425C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		86B8424A153BCA1A00C3425C /* TimerDebug-Prefix.pch */ = {isa = PBXFileReference; path = "TimerDebug-Prefix.pch"; sourceTree = "<group>"; };
+		86B8424A153BCA1A00C3425C /* TimerDebug-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TimerDebug-Prefix.pch"; sourceTree = "<group>"; };
 		86B8424B153BCA1A00C3425C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		86B8424D153BCA1A00C3425C /* TimerDebugAppDelegate.h */ = {isa = PBXFileReference; path = TimerDebugAppDelegate.h; sourceTree = "<group>"; };
+		86B8424D153BCA1A00C3425C /* TimerDebugAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TimerDebugAppDelegate.h; sourceTree = "<group>"; };
 		86B8424E153BCA1A00C3425C /* TimerDebugAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TimerDebugAppDelegate.m; sourceTree = "<group>"; };
 		86B84251153BCA1A00C3425C /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		86B84258153BCA6A00C3425C /* GoodTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GoodTimerViewController.h; sourceTree = "<group>"; };
+		86B84259153BCA6A00C3425C /* GoodTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GoodTimerViewController.m; sourceTree = "<group>"; };
+		86B8425A153BCA6A00C3425C /* GoodTimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GoodTimerViewController.xib; sourceTree = "<group>"; };
+		86B8425D153BCA9300C3425C /* BadTimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BadTimerViewController.h; sourceTree = "<group>"; };
+		86B8425E153BCA9300C3425C /* BadTimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BadTimerViewController.m; sourceTree = "<group>"; };
+		86B8425F153BCA9300C3425C /* BadTimerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BadTimerViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,6 +86,12 @@
 			children = (
 				86B8424D153BCA1A00C3425C /* TimerDebugAppDelegate.h */,
 				86B8424E153BCA1A00C3425C /* TimerDebugAppDelegate.m */,
+				86B84258153BCA6A00C3425C /* GoodTimerViewController.h */,
+				86B84259153BCA6A00C3425C /* GoodTimerViewController.m */,
+				86B8425D153BCA9300C3425C /* BadTimerViewController.h */,
+				86B8425E153BCA9300C3425C /* BadTimerViewController.m */,
+				86B8425F153BCA9300C3425C /* BadTimerViewController.xib */,
+				86B8425A153BCA6A00C3425C /* GoodTimerViewController.xib */,
 				86B84250153BCA1A00C3425C /* MainWindow.xib */,
 				86B84245153BCA1A00C3425C /* Supporting Files */,
 			);
@@ -142,6 +158,8 @@
 			files = (
 				86B84249153BCA1A00C3425C /* InfoPlist.strings in Resources */,
 				86B84252153BCA1A00C3425C /* MainWindow.xib in Resources */,
+				86B8425C153BCA6A00C3425C /* GoodTimerViewController.xib in Resources */,
+				86B84261153BCA9300C3425C /* BadTimerViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +172,8 @@
 			files = (
 				86B8424C153BCA1A00C3425C /* main.m in Sources */,
 				86B8424F153BCA1A00C3425C /* TimerDebugAppDelegate.m in Sources */,
+				86B8425B153BCA6A00C3425C /* GoodTimerViewController.m in Sources */,
+				86B84260153BCA9300C3425C /* BadTimerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

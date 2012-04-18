@@ -12,10 +12,16 @@
 
 
 @synthesize window=_window;
+@synthesize rootTabBar;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+//    UITabBarController *rtb = [[UITabBarController alloc] init];
+//    self.rootTabBar = rtb;
+//    [rtb release];
+    
+    [self.window addSubview:self.rootTabBar.view];
     [self.window makeKeyAndVisible];
     return YES;
 }
@@ -61,6 +67,7 @@
 
 - (void)dealloc
 {
+    [rootTabBar release];
     [_window release];
     [super dealloc];
 }
