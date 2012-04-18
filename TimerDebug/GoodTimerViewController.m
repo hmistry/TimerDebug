@@ -16,7 +16,7 @@
 
 @synthesize timer1Label;
 @synthesize timer2Label;
-@synthesize zeroTimestamp;
+@synthesize count1, count2;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,7 +29,6 @@
 
 - (void)dealloc
 {
-    [zeroTimestamp release];
     [oneSecTimer release];
     [twoSecTimer release];
     [timer1Label release];
@@ -51,8 +50,10 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
-    self.timer1Label.text = @"0.0 sec";
-    self.timer2Label.text = @"0.0 sec";
+    self.timer1Label.text = @"0 sec";
+    self.timer2Label.text = @"0 sec";
+    count1 = 0;
+    count2 = 0;
     
 }
 
@@ -100,7 +101,7 @@
     [self invalidateTimer:self.twoSecTimer];
     
     // Create new NSTimer
-	self.twoSecTimer = [NSTimer scheduledTimerWithTimeInterval:0.1
+	self.twoSecTimer = [NSTimer scheduledTimerWithTimeInterval:0.5
                                                         target:self
                                                       selector:@selector(updateLabel2)
                                                       userInfo:nil
@@ -110,26 +111,28 @@
 }
 
 -(void) updateLabel1 {
-    self.timer1Label.text = [NSString stringWithFormat:@"%.1f sec", [[NSDate date] timeIntervalSinceDate:self.zeroTimestamp]];
+    count1++;
+    self.timer1Label.text = [NSString stringWithFormat:@"%d sec", count1];
 }
 
 
 -(void) updateLabel2 {
-    self.timer2Label.text = [NSString stringWithFormat:@"%.1f sec", [[NSDate date] timeIntervalSinceDate:self.zeroTimestamp]];
+    count2++;
+    self.timer2Label.text = [NSString stringWithFormat:@"%d sec", count2];
 }
 
 -(IBAction) startButtonPressed:(id) sender {
-    self.zeroTimestamp = [NSDate date];
+    count1 = 0;
+    count2 = 0;
 
-    self.timer1Label.text = @"0.0 sec";
-    self.timer2Label.text = @"0.0 sec";
+    self.timer1Label.text = @"0 sec";
+    self.timer2Label.text = @"0 sec";
 
     [self oneSecondRepeatingTimer];
     [self twoSecondRepeatingTimer];
 }
 
 -(IBAction) stopButtonPressed:(id) sender {
-    self.zeroTimestamp = nil;
     [self invalidateTimer:self.oneSecTimer];
     [self invalidateTimer:self.twoSecTimer];
 }

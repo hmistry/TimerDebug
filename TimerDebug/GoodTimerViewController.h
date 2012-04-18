@@ -19,7 +19,8 @@
 @property (nonatomic, retain) NSTimer *oneSecTimer;
 @property (nonatomic, retain) NSTimer *twoSecTimer;
 
-@property (nonatomic, retain) NSDate *zeroTimestamp;
+@property (nonatomic, assign) int count1;
+@property (nonatomic, assign) int count2;
 
 -(void) oneSecondRepeatingTimer; 
 -(void) twoSecondRepeatingTimer;
