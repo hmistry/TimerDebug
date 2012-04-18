@@ -17,14 +17,14 @@
 @property (nonatomic, retain) IBOutlet UILabel *timer2Label;
 
 @property (nonatomic, retain) NSTimer *oneSecTimer;
-@property (nonatomic, retain) NSTimer *twoSecTimer;
+@property (nonatomic, retain) NSTimer *halfSecTimer;
 
 @property (nonatomic, assign) int count1;
 @property (nonatomic, assign) int count2;
 
 -(void) createTimer:(NSTimer *)timer withTimeInterval:(NSTimeInterval)timeInterval selector:(SEL)aSelector repeats:(BOOL)repeat;
 -(void) oneSecondRepeatingTimer; 
--(void) twoSecondRepeatingTimer;
+-(void) halfSecondRepeatingTimer;
 -(void) updateLabel1;
 -(void) updateLabel2;
 -(IBAction) startButtonPressed:(id) sender;

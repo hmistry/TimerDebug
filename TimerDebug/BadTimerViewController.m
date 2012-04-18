@@ -12,7 +12,7 @@
 @implementation BadTimerViewController
 
 @synthesize oneSecTimer;
-@synthesize twoSecTimer;
+@synthesize halfSecTimer;
 
 @synthesize timer1Label;
 @synthesize timer2Label;
@@ -30,7 +30,7 @@
 - (void)dealloc
 {
     [oneSecTimer release];
-    [twoSecTimer release];
+    [halfSecTimer release];
     [timer1Label release];
     [timer2Label release];
     [super dealloc];
@@ -96,8 +96,8 @@
     [self createTimer:self.oneSecTimer withTimeInterval:1.0 selector:@selector(updateLabel1) repeats:YES];    
 }
 
--(void) twoSecondRepeatingTimer { 
-    [self createTimer:self.twoSecTimer withTimeInterval:0.5 selector:@selector(updateLabel2) repeats:YES];    
+-(void) halfSecondRepeatingTimer { 
+    [self createTimer:self.halfSecTimer withTimeInterval:0.5 selector:@selector(updateLabel2) repeats:YES];    
 }
 
 -(void) updateLabel1 {
@@ -119,12 +119,12 @@
     self.timer2Label.text = @"0 sec";
     
     [self oneSecondRepeatingTimer];
-    [self twoSecondRepeatingTimer];
+    [self halfSecondRepeatingTimer];
 }
 
 -(IBAction) stopButtonPressed:(id) sender {
     [self invalidateTimer:self.oneSecTimer];
-    [self invalidateTimer:self.twoSecTimer];
+    [self invalidateTimer:self.halfSecTimer];
 }
 
 @end
